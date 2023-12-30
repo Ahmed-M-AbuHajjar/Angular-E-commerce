@@ -22,6 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "baseHref": "https://ahmed-m-abuhajjar.github.io/Angular-E-commerce/",
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
