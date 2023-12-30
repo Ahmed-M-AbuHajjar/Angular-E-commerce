@@ -1,0 +1,28 @@
+.productCategory h4{
+  letter-spacing: 2px;
+}
+.category-slider{
+  z-index: 2;
+}
+.category-slider p{
+  color: #807f7f;
+}
+.category-card{
+  cursor: pointer;
+  overflow: hidden;
+  &:hover img{
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+  }
+}
+@media screen and (max-width: 768px) {
+ .productCategory{
+  font-size: 0.7em;
+ }
+ .product-categories{
+  flex-direction: column !important;
+ }
+ .category-left,.category-right{
+  width: 100% !important;
+}
+}

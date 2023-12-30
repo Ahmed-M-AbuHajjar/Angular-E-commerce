@@ -1,0 +1,14 @@
+<section class="view-product">
+ <div class="view-product-content d-flex">
+  <div class="product-image col-8">
+    <img [src]="product.images[0]" alt="product-image">
+  </div>
+  <div class="product-details col-4">
+    <h3 class="mb-4">{{product.title}}</h3>
+    <h4 class="text-secondary mb-4">${{product.price}}</h4>
+    <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.</p>
+    <a class="text-light text-decoration-none" routerLink=""><button class="btn btn-dark text-uppercase mb-4 px-4 py-3">Add to Cart</button></a>
+    <a class="text-light" routerlink=""><p class="text-secondary text-decoration-underline link-p">view product details</p></a>
+  </div>
+ </div>
+</section>

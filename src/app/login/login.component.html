@@ -1,0 +1,38 @@
+<section class="login my-5 py-5">
+  <div class="container login_form py-5 text-center">
+    <div class="form-head">
+      <img class="mb-5" src="../../assets/images/logo.png" alt="logo">
+      <h2 class="text-uppercase mb-3">welcome back</h2>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+
+
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control mb-3" type="email" placeholder="Email" formControlName="email">
+          <p *ngIf="loginForm.get('email')?.hasError('required')&&loginForm.get('email')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Email is Required!
+          </p>
+          <p *ngIf="loginForm.get('email')?.hasError('pattern')&&loginForm.get('email')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Invalid Email Format!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control" type="password" placeholder="Password" formControlName="password">
+          <p *ngIf="loginForm.get('password')?.hasError('required')&&loginForm.get('password')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Password is Required!
+          </p>
+          <p *ngIf="loginForm.get('password')?.hasError('pattern')&&loginForm.get('password')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Password Must Exceed 8 Characters and Contain at least 1 number, 1 character and 1 Symbol!
+          </p>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark text-center mt-3 px-5 py-3" [disabled]="!loginForm.valid || !loginForm.dirty">Login</button>
+    </form>
+    <p class="text-secondary my-3">New in this site ? <a class="text-dark text-decoration-none" routerLink="/register">Create New Account</a></p>
+    <p><a routerLink="/forgotpassword" class="text-dark text-decoration-none">Forgot your password?</a></p>
+  </div>
+</section>

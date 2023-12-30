@@ -1,0 +1,116 @@
+<div class="container d-flex justify-content-center pt-3 position-relative">
+  <span class="small-screen-menu-label d-none">Main Menu</span>
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid ">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-uppercase" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item px-2">
+          <a routerLink="home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" routerLink="" id="shop"  (mouseenter)="startShopHoverTimer()" (mouseleave)="startShopCollapseTimer()">Shop<i class="fa-solid fa-chevron-down  ms-1 fa-xs"></i>
+          </a>
+        </li>
+        <li class="nav-item px-2">
+          <a class="nav-link" routerLink="" id="pages" (mouseenter)="startPagesHoverTimer()" (mouseleave)="startPagesCollapseTimer()">Pages<i class="fa-solid fa-chevron-down  ms-1 fa-xs"></i></a>
+        </li>
+        <li class="nav-item px-2 position-relative">
+          <a class="nav-link" routerLink="" id="blog" (mouseenter)="startBlogHoverTimer()" (mouseleave)="startBlogCollapseTimer()">Blog<i class="fa-solid fa-chevron-down  ms-1 fa-xs"></i></a>
+          <div class="bg-light position-absolute navLinksMenu" id="blogNavMenu" (mouseenter)="onNavLinksMenuHover()" (mouseleave)="startBlogCollapseTimer()"   [ngClass]="{ 'show-blogNavMenu': showBlogMenu }">
+            <div class="d-flex row">
+              <div class="col-12">
+                <ul class="list-unstyled text-uppercase w-100">
+                  <li class="mb-2"><a class="nav-link" routerLink="">blog left sidebar</a></li>
+                  <li class="mb-2"><a class="nav-link" routerLink="">blog right sidebar</a></li>
+                  <li class="mb-2"><a class="nav-link" routerLink="">blog full width</a></li>
+                  <li class="mb-2"><a class="nav-link" routerLink="">blog 2 columns</a></li>
+                  <li class="mb-2"><a class="nav-link" routerLink="">blog single</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item px-2 position-relative">
+          <a class="nav-link" routerLink="" id="elements" (mouseenter)="startElementsHoverTimer()" (mouseleave)="startElementsCollapseTimer()">Elements<i class="fa-solid fa-chevron-down  ms-1 fa-xs"></i></a>
+          <div class="bg-light position-absolute navLinksMenu" id="elementsNavMenu" (mouseenter)="onNavLinksMenuHover()" (mouseleave)="startElementsCollapseTimer()"   [ngClass]="{ 'show-elementsNavMenu': showElementsMenu }">
+            <div class="d-flex row">
+              <div class="col-12">
+                <ul class="list-unstyled text-uppercase">
+                  <li class="mb-2"><a class="nav-link" routerLink="">typography</a></li>
+                  <li class="mb-2"><a class="nav-link" routerLink="">buttons</a></li>
+                  <li class="mb-2"><a class="nav-link" routerLink="">alerts</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="bg-light position-absolute navLinksMenu" id="shopNavMenu" (mouseenter)="onNavLinksMenuHover()" (mouseleave)="startShopCollapseTimer()"   [ngClass]="{ 'show-shopNavMenu': showShopMenu }">
+  <div class="d-flex row">
+    <div class="col-6">
+      <h6>Pages</h6>
+      <ul class="list-unstyled text-uppercase">
+        <li class="mb-2"><a class="nav-link" routerLink="shop">shop</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">checkout</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">cart</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">pricing</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">confirmation</a></li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <h6>Layout</h6>
+    <ul class="list-unstyled text-uppercase">
+      <li class="mb-2"><a class="nav-link" routerLink="">product details</a></li>
+      <li class="mb-2 pe-5"><a class="nav-link" routerLink="">shop with sidebar</a></li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="bg-light position-absolute navLinksMenu w-100" id="pagesNavMenu" (mouseenter)="onNavLinksMenuHover()" (mouseleave)="startPagesCollapseTimer()"   [ngClass]="{ 'show-pagesNavMenu': showPagesMenu }">
+  <div class="d-flex row">
+    <div class="col-3">
+      <h6>Introduction</h6>
+      <ul class="list-unstyled text-uppercase">
+        <li class="mb-2"><a class="nav-link" routerLink="">contact us</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">about us</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">404 page</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">coming soon</a></li>
+        <li class="mb-2"><a class="nav-link" routerLink="">faq</a></li>
+      </ul>
+    </div>
+    <div class="col-3">
+      <h6>Dashboard</h6>
+    <ul class="list-unstyled text-uppercase">
+      <li class="mb-2"><a class="nav-link" routerLink="">user interface</a></li>
+      <li class="mb-2"><a class="nav-link" routerLink="">orders</a></li>
+      <li class="mb-2"><a class="nav-link" routerLink="">address</a></li>
+      <li class="mb-2"><a class="nav-link" routerLink="">profile details</a></li>
+    </ul>
+  </div>
+  <div class="col-3">
+    <h6>Utility</h6>
+  <ul class="list-unstyled text-uppercase">
+    <li class="mb-2"><a class="nav-link" routerLink="login">login page</a></li>
+    <li class="mb-2"><a class="nav-link" routerLink="register">signup page</a></li>
+    <li class="mb-2"><a class="nav-link" routerLink="">forget password</a></li>
+  </ul>
+</div>
+<div class="col-3">
+  <a routerLink="/shop">
+  <img class="w-100" src="../../assets/images/shop/header-img.jpg" alt="">
+</a>
+</div>
+  </div>
+</div>
+
+
+</div>

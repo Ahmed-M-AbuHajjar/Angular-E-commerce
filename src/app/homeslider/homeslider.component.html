@@ -1,0 +1,44 @@
+<section class="homeSlider mb-5">
+  <div class="sliderShadow position-relative">
+    <div id="carouselExampleIndicators" class="carousel slide" [attr.data-interval]="false">
+      <div class="carousel-indicators">
+        <button
+        (click)="bulletsClicked()"
+      type="button"
+      class="mx-3"
+      *ngFor="let slide of slides; let i = index"
+      [attr.data-bs-target]="'#carouselExampleIndicators'"
+      [attr.data-bs-slide-to]="i"
+      [class.active]="currentSlideIndex === i"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+    ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="sliders carousel-item" *ngFor="let slide of slides; let i = index" [class.active]="currentSlideIndex === i">
+          <div [class]="slide.imgClass" class=" d-flex w-100 h-100 position-relative">
+            <div class="slider-shadow">
+            </div>
+
+            <div class="w-100 text-light text-center h-100 d-flex flex-column justify-content-center position-absolute align-content-center align-items-center">
+              <div class="slider-text w-50" [class]="slide.textClass">
+                <p class="text-uppercase fadeInUp animated">products</p>
+                <h2 class="fadeInUp animated">The beauty of nature<br> is hidden in details.</h2>
+                <a routerLink="/shop" class="btn btn-outline-light px-4 py-3  fadeInUp animated">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="sliderBTN previousBTN start-0 ms-3 border-0" [class.sliderBTN-Active]="isPreviousButtonActive" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="previous" (click)=" activatePreviousButton()">
+      <a class="nav-link">
+        <i class="fa-solid fa-chevron-left"></i>
+      </a>
+    </button>
+    <button class="sliderBTN nextBTN end-0 me-3 border-0" [class.sliderBTN-Active]="isNextButtonActive" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" (click)=" activateNextButton()">
+      <a class="nav-link">
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </button>
+  </div>
+</section>

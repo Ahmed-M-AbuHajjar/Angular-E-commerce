@@ -1,0 +1,114 @@
+.homeSlider{
+  height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sliderShadow{
+  background-color: rgba($color: #000000, $alpha: 0.7) !important;
+
+}
+.sliderBTN{
+  border-radius: 50%;
+  padding: 12px 20px;
+  position:absolute;
+  top: 50%;
+  transition: 0.2s all;
+}
+.sliderBTN:hover{
+  background-color: #000000;
+  color: #fff;
+}
+.sliderBTN-Active{
+  background-color: #000000 !important;
+  color: #fff !important;
+}
+.slider0text p{
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
+}
+.slider-text h2{
+font-size: 3em;
+animation-delay: 0.5s;
+animation-duration: 0.3s;
+}
+.slider-text button{
+  animation-delay: 0.8s;
+  animation-duration: 0.3s;
+}
+.animated{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.fadeInUp{
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@keyframes fadeInUp{
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+100% {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+}
+
+.slider-1{
+  background-image: url(../../assets/images/slider/slider-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-2{
+  background-image: url(../../assets/images/slider/slider-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-3{
+  background-image: url(../../assets/images/slider/slider-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider-shadow{
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.sliders{
+  height: 85vh;
+  overflow: hidden;
+}
+.carousel.inner {
+  .carousel-item{
+    transition: transofrm 0.5s ease-in-out !important;
+  }
+}
+.carousel-indicators{
+  position: absolute!important;
+  z-index: 2;
+  bottom: -20px !important;
+  margin: 0 !important;
+}
+.carousel-indicators button.active{
+  background-color: #363636 !important;
+}
+.carousel-indicators button{
+ background-color: #838383 !important;
+ border: none !important;
+ width: auto!important;
+ padding: 2px 3px !important;
+ border-radius: 50% !important;
+}
+.carousel-indicators button:hover{
+  background-color: #000000 !important;
+}
+@media screen and (max-width: 768px) {
+  .homeSlider{
+    font-size: 0.6em!important;
+    background-position: center center;
+  }
+}

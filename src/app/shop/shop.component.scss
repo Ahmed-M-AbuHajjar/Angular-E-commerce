@@ -1,0 +1,119 @@
+.section-top{
+  background-color: #F5F5F5;
+  h2{
+    font-size: 2.5em;
+    letter-spacing: 1.2px;
+    color: #535353;
+  }
+  p{
+    font-size: 0.9em;
+    letter-spacing: 1.2px;
+  }
+}
+.shop-card:hover .shop-card-slider{
+  visibility: visible;
+}
+.shop-card p{
+  color: #969696;
+  font-weight: 600;
+}
+.shop-card span{
+  z-index: 3;
+}
+.shop-card-slider{
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  z-index: 2;
+ visibility: hidden;
+}
+.shop-card-slider li{
+  background-color: #fff;
+  &:hover{
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer
+  }
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+  height: 65%;
+  overflow: auto;
+}
+.close-view-btn{
+  color: #a9a8a8;
+ i{
+    font-size: 40px;
+ }
+}
+.category-dropdown {
+  position: relative;
+  font-family: Arial, sans-serif;
+  width: 200px;
+
+  .selected-category {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .arrow-icon {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    display: none;
+    z-index: 1;
+    overflow: hidden;
+
+    .category-item {
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+}
+.form-select{
+  width: fit-content;
+  .form-select:focus {
+    border-color: #000;
+    box-shadow:none
+  }
+
+}

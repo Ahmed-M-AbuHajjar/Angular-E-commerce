@@ -1,0 +1,20 @@
+.subscribe-top{
+background-color: #f9f9f9;
+}
+.subscribe-top p{
+ color: #989898;
+}
+.subscribe-top .subscribe-input{
+ width: 40% !important;
+}
+.subscribe-bot{
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 768px){
+  .subscribe-top,input::placeholder,button{
+    font-size: 0.8em;
+  }
+  .subscribe-top .subscribe-input{
+    width: 100% !important;
+  }
+}

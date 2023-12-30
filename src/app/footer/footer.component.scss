@@ -1,0 +1,23 @@
+.footer{
+  background-color: #F9F9F9;
+}
+.footer i{
+  font-size: 1.2em;
+}
+.footer-links{
+  font-size: 13px;
+  color: #333333;
+}
+.copyRight{
+  color: #8e8e8e;
+}
+@media screen and (max-width:768px) {
+  .footer ul{
+    font-size: 0.75em;
+    margin-left:10px;
+    margin-right: 10px;
+  }
+  .footer li{
+
+  }
+}

@@ -1,0 +1,17 @@
+.zero-four{
+  font-size: 360px;
+  line-height: 1;
+  font-weight: 800;
+  color: #333333;
+}
+.page_not_found{
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #333333;
+}
+@media screen and (max-width: 768px){
+  .zero-four{
+    font-size: 10em;
+  }
+}

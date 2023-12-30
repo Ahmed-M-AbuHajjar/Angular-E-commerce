@@ -1,0 +1,45 @@
+<section class="trendy-products">
+  <h4 class="text-uppercase text-center mb-5 pt-5">Trendy products</h4>
+  <div class="container">
+    <div class="row row-gap-4">
+      <div
+        class="col-md-4 col-sm-12 trendy-card text-center d-flex flex-column align-items-stretch"
+        *ngFor="let product of trendyProducts"
+      >
+        <div class="position-relative h-100">
+
+          <img class="h-100 w-100" [src]="product.images[0]" alt="" />
+          <div
+            class="position-absolute trendy-card-slider top-0 start-0 h-100 w-100 d-flex justify-content-center align-items-end"
+          >
+            <ul class="d-flex list-unstyled">
+              <li class="me-1 px-4 py-3" (click)="showDetails(product)">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </li>
+              <li class="me-1 px-4 py-3"><i class="fa-solid fa-heart"></i></li>
+              <li class="px-4 py-3">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </li>
+            </ul>
+          </div>
+          <span
+            class="position-absolute bg-dark text-light top-0 end-0 px-3 py-1 m-2"
+            *ngIf="product.discountPercentage > 15.5"
+            >Sale</span
+          >
+        </div>
+        <div class="flex-grow-1">
+          <h5 class="pt-3">{{ product.title }}</h5>
+          <p>${{ product.price }}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showProductDetails" class="popup-overlay">
+    <div class="popup-content">
+      <app-viewproduct [product]="selectedProduct"></app-viewproduct>
+      <a (click)="closeDetails()" class="position-absolute top-0 end-0 m-3 text-decoration-none close-view-btn"><i  class="fa-solid fa-xmark lg"></i></a>
+    </div>
+  </div>
+</section>

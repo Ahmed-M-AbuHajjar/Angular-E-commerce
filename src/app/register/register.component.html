@@ -1,0 +1,67 @@
+<section class="register my-5 py-5">
+  <div class="container register_form py-5 text-center">
+    <div class="form-head">
+      <img class="mb-5" src="../../assets/images/logo.png" alt="logo">
+      <h2 class="text-uppercase mb-3">create your account</h2>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control mb-3" type="text" placeholder="First Name" formControlName="first_name">
+           <p *ngIf="registerForm.get('first_name')?.hasError('required')&&registerForm.get('first_name')?.touched" class="text-start" class="alert py-1 alert-danger">
+            First Name is Required!
+          </p>
+          <p *ngIf="registerForm.get('first_name')?.hasError('maxlength')&&registerForm.get('first_name')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Cannot Exceed 15 Characters!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control mb-3" type="text" placeholder="Last Name" formControlName="last_name">
+          <p *ngIf="registerForm.get('last_name')?.hasError('required')&&registerForm.get('last_name')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Last Name is Required!
+          </p>
+          <p *ngIf="registerForm.get('last_name')?.hasError('maxlength')&&registerForm.get('last_name')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Cannot Exceed 30 Characters!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control mb-3" type="text" placeholder="Username" formControlName="user_name">
+          <p *ngIf="registerForm.get('user_name')?.hasError('required')&&registerForm.get('user_name')?.touched" class="text-start" class="alert py-1 alert-danger">
+            User Name is Required!
+          </p>
+          <p *ngIf="registerForm.get('user_name')?.hasError('maxlength')&&registerForm.get('user_name')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Cannot Exceed 15 Characters!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control mb-3" type="email" placeholder="Email" formControlName="email">
+          <p *ngIf="registerForm.get('email')?.hasError('required')&&registerForm.get('email')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Email is Required!
+          </p>
+          <p *ngIf="registerForm.get('email')?.hasError('pattern')&&registerForm.get('email')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Invalid Email Format!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-11 mx-auto text-start">
+          <input class="form-control" type="password" placeholder="Password" formControlName="password">
+          <p *ngIf="registerForm.get('password')?.hasError('required')&&registerForm.get('password')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Password is Required!
+          </p>
+          <p *ngIf="registerForm.get('password')?.hasError('pattern')&&registerForm.get('password')?.touched" class="text-start" class="alert py-1 alert-danger">
+            Password Must Exceed 8 Characters and Contain at least 1 number, 1 character and 1 Symbol!
+          </p>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dark text-center mt-3 px-5 py-3" [disabled]="!registerForm.valid || !registerForm.dirty">Sign Up</button>
+    </form>
+    <p class="text-secondary my-3">Already have an account ? <a class="text-dark text-decoration-none" routerLink="/login">Login</a></p>
+  </div>
+</section>

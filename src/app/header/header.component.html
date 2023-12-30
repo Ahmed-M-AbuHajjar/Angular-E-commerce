@@ -1,0 +1,77 @@
+<header class="pt-5">
+  <div class="container d-flex justify-content-between pb-5">
+    <p>
+      <i class="fa-solid fa-phone me-2 fa-sm"></i
+      ><span>0129- 12323-123123</span>
+    </p>
+    <div class="logo ms-5">
+      <a routerLink="home"
+        ><img class="logoImg" src="../../assets/images/logo.png" alt=""
+      /></a>
+    </div>
+    <ul class="d-flex list-unstyled position-relative">
+      <li class="px-3 d-flex cartList">
+        <a class="nav-link" routerLink=""
+          ><i class="fa-solid fa-cart-shopping me-2 fa-xs"></i>Cart</a
+        >
+        <div class="position-absolute cartHoverMenu top-100 end-0 row">
+          <div class="d-flex py-3 position-relative cartHover-Item">
+            <div class="cartHoverMenu-Image col-3 me-2">
+              <img
+                src="../../assets/images/shop/cart/cart-1.jpg"
+                alt="cart image"
+              />
+            </div>
+            <ul class="list-unstyled col-8">
+              <li class="title mb-2">Ladies Bag</li>
+              <li class="amount mb-2">1 x 1250.00</li>
+              <li class="price mb-2">$1200</li>
+            </ul>
+            <button class="btn btn-close position-absolute end-0 top-0 m-3 closeBTN"></button>
+          </div>
+          <div class="d-flex py-3 position-relative cartHover-Item">
+            <div class="cartHoverMenu-Image col-3  me-2">
+              <img
+                src="../../assets/images/shop/cart/cart-2.jpg"
+                alt="cart image"
+              />
+            </div>
+            <ul class="list-unstyled col-8">
+              <li class="title mb-2">Ladies Bag</li>
+              <li class="amount mb-2">1 x 1250.00</li>
+              <li class="price mb-2">$1200</li>
+            </ul>
+            <button class="btn btn-close position-absolute end-0 top-0 m-3 closeBTN"></button>
+          </div>
+          <div class="totalPrice mt-3">
+            <div class="d-flex justify-content-between">
+            <h6>Total</h6>
+            <p>$1799.00</p>
+          </div>
+          <div class="d-flex justify-content-center mb-2">
+            <button class="btn btn-dark text-uppercase viewCart me-2">view cart</button>
+            <button class="btn btn-light text-uppercase checkOut">check out</button>
+          </div>
+          </div>
+        </div>
+      </li>
+      <li class="px-3 d-flex searchList">
+        <a class="nav-link" routerLink=""
+          ><i class="fa-solid fa-magnifying-glass me-2 fa-xs"></i>Search</a>
+          <div class="position-absolute searchMenu top-100 end-0 start-0 p-2 row">
+
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">            </form>
+
+            </div>
+
+      </li>
+      <li class="px-3 d-flex">
+        <a class="nav-link" routerLink=""
+          >EN<i class="fa-solid fa-chevron-down ms-2 fa-xs"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <app-navbar></app-navbar>
+</header>
